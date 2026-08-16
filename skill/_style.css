@@ -1,0 +1,8 @@
+:root{--bg:#fbfaf7;--fg:#1d1d1b;--mut:#6b6a66;--acc:#8a2b0f;--card:#fff;--line:#e6e2d9}
+@media (prefers-color-scheme:dark){:root{--bg:#141413;--fg:#ece9e2;--mut:#a9a59c;--acc:#f0a070;--card:#1c1c1a;--line:#2c2b28}}
+html{background:var(--bg)}body{margin:0;padding:18px;max-width:900px;margin:0 auto;font:16px/1.55 -apple-system,"Noto Sans Devanagari","Mangal",Segoe UI,Roboto,sans-serif;color:var(--fg);background:var(--bg);word-break:break-word}
+h1{font-size:1.5rem;margin:.2em 0}h2{font-size:1.2rem;margin:1.4em 0 .4em;border-bottom:1px solid var(--line);padding-bottom:.2em}h3{font-size:1.05rem}
+a{color:var(--acc)}code{background:var(--card);border:1px solid var(--line);padding:0 4px;border-radius:4px;font-size:.92em}pre{background:var(--card);border:1px solid var(--line);padding:10px;overflow-x:auto;border-radius:6px}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%}td,th{border:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+.btn{display:inline-block;background:var(--acc);color:#fff;padding:10px 16px;border-radius:8px;text-decoration:none;font-weight:600;margin:6px 8px 6px 0}.mut{color:var(--mut)}
+blockquote{border-left:3px solid var(--acc);margin:0;padding:2px 12px;color:var(--mut)}hr{border:0;border-top:1px solid var(--line);margin:1.4em 0}

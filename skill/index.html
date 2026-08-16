@@ -1,0 +1,24 @@
+<!doctype html><html lang="hi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>आरक्षण लॉटरी हेल्प-डेस्क · Claude skill</title><link rel="stylesheet" href="_style.css"></head><body>
+<h1>आरक्षण लॉटरी हेल्प-डेस्क</h1>
+<p class="mut">Rajasthan local-body elections 2026 · seat/office reservation &amp; lottery questions, answered from the Act, Rules, circulars, verified court rulings and the state's own 2026 practice — a Claude skill + a readable FAQ. Version 1.0 · 16 Aug 2026.</p>
+<p><a class="btn" href="faq.html">FAQ पढ़ें (29 प्रश्न)</a> <a class="btn" href="courts.html">Court rulings</a> <a class="btn" href="rajasthan-reservation-lottery-desk.zip">Download the Claude skill (zip, 85 KB)</a> <a class="btn" href="../">Clickable tool (Dausa example)</a></p>
+<h2>यह क्या है / what this is</h2>
+<p>A skill folder that any Claude (Claude Code, Claude desktop, claude.ai with Skills) can load. Once loaded, ask in Hindi or English — <i>कितने स्थान किस वर्ग को? महिला स्थान odd में ऊपर या नीचे? 50% से ऊपर हो गया तो किसे घटाएँ? नियम 7(13) क्या बाहर करता है? कार्यवाही विवरण में क्या लिखें?</i> — and it answers <b>verdict → clause (verbatim) → what the state did in 2026 → what to record / who must decide</b>. Includes a calculator (<code>scripts/quota.py</code>) that reproduces the Dausa 2026 numbers.</p>
+<h2>Install</h2>
+<ol>
+<li>Download the zip and unzip it.</li>
+<li><b>Claude Code / Claude desktop:</b> move the folder to <code>~/.claude/skills/rajasthan-reservation-lottery-desk/</code>, start a new session, ask your question (or type <code>/rajasthan-reservation-lottery-desk</code>).</li>
+<li><b>claude.ai with Skills:</b> Settings → Skills → add the folder/zip.</li>
+<li>No Claude? The <a href="faq.html">FAQ</a> and <a href="courts.html">court quotes</a> read on their own.</li>
+</ol>
+<h2>What is inside</h2>
+<table><tr><th>file</th><th>what</th></tr>
+<tr><td>SKILL.md</td><td>the answer protocol</td></tr>
+<tr><td>references/faq.md</td><td>29 answered questions + letter lines to the department</td></tr>
+<tr><td>references/rules-verbatim.md</td><td>Act ss.15–16, Rules rr.5–10, municipal r.5, Circulars 62/64, Notification 42, DLB letters, RHC rulings — verbatim, source-tagged</td></tr>
+<tr><td>references/reservation-code.md</td><td>THE RESERVATION CODE — numbered decision tree, declarations D-1…D-36</td></tr>
+<tr><td>references/edge-cases.md · state-questions.md</td><td>89 edge cases; Q-1…Q-16 for the state</td></tr>
+<tr><td>references/courts.md · state-practice.md</td><td>verified quotes (Krishna Murthy 2010, Gawali 2021, Manak Chand 2010, Virender Singh 2020); the state's 2026 arithmetic</td></tr>
+<tr><td>scripts/quota.py</td><td>the calculator (<code>--selftest</code>)</td></tr></table>
+<p class="mut">Built from the Dausa 2026 exercise. Text over practice over habit; every silence named; no invented citations. Corrections: send the clause.</p>
+</body></html>

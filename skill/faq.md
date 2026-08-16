@@ -1,0 +1,121 @@
+# FAQ — questions officers actually ask about the 2026 reservation lotteries, answered from the text (with the practice and the open points marked)
+
+Format of every answer: **verdict → what the text says (clause) → what the state does → what to record / who decides if silent.** Hindi one-liners are given where the answer will be spoken in the room. "Code n.n" = node in reservation-code.md; "D-n" = declaration the conducting officer records; "Q-n" = a question only the state can settle (state-questions.md).
+
+---
+## A. Which law applies
+
+**Q1. Panchayat or urban — which rules govern which draw?**
+- **Panchayati Raj (rural):** Rajasthan Panchayati Raj Act 1994 ss.15–16 (+ s.16 Explanation on fractions); Rajasthan Panchayati Raj (Election) Rules 1994 rr.5–10 (r.7 = the engine; r.8 = both-list ward; r.9 = सरपंच/प्रधान offices; r.10 = प्रमुख); Notification /42 (24.07.2026, delegation); Circular /62 (10.08.2026, operative gloss); Circular /64 (dates). Conducts: Collector (ZP/PS wards, प्रधान), SDM (GP wards, सरपंच).
+- **Urban:** Rajasthan Municipalities Act 2009 s.6; Rajasthan Municipalities (Election) Rules 1994 r.5; DLB letters 23018/23411/23423/23425/23434 and अधिसूचना 23401 (category counts per body). Conducts: Collector.
+- They differ on: women's fraction (PRI ½; ULB ⅓ in practice), 5% threshold (PRI yes; municipal r.5 has none), notice (PRI: MLAs r.7(11); ULB: MLAs + recognised parties r.5(12)), rotation continuity tests (DLB 23434 nine points).
+- Hindi: "पंचायत के लिए अधिनियम 1994 धारा 15–16 व निर्वाचन नियम 5–10; नगर निकाय के लिए नगरपालिका अधिनियम 2009 धारा 6 व नियम 5।"
+
+**Q2. Which copy of the Rules is current? Websites show "one-third" for women.**
+India Code / PRS / legitquest / parts of IndianKanoon print the pre-2008 text (one-third). The SEC Rajasthan Manual (2014) carries the 2008 amendment footnotes (one-half: notification F.4(12)PRD/Legal/Rule/Amend/08/2362, 25.06.2008). Use rules-verbatim.md; the SEC Manual is controlling. Circular 62 ¶4(v) confirms 50%.
+
+---
+## B. How many seats/offices (quantum)
+
+**Q3. How many SC and ST seats does a body get?**
+s.15(2): "as nearly as may be, the same proportion … as the population of such Castes … bears to the total population of the area." Compute each separately: SC = round-half-up(N × SC_pop ÷ Total_pop); ST likewise (s.16 Explanation: half or more → next higher; less than half → ignored). Base = the body's own **total** population (all persons of the same area whose SC/ST counts you use). Offices (सरपंच per PS, प्रधान per ZP): counts are **state-supplied** (s.16(2) state proportion; Circular 62 ¶2) — take them, don't recompute (Code 1.2). Then apply the 50% check (Q5). Calculator: `scripts/quota.py`.
+
+**Q4. How many OBC seats?**
+s.15(3): percentage = 50 − (SC+ST%), capped at 21; if SC+ST ≥ 50 the formula gives 0; **proviso:** at least one seat in each PRI at each level where SC+ST ≤ 70%; above 70% nothing. Base in the Act's words = "combined rural population … in the concerned district"; the OBC Commission's 2026 tables applied it **body-wise** (each PS's own SC+ST%) — the given number is in force (Q-11 open). Offices: s.16(3) — same tests on the PS/ZP's own area, floor of one office per PS and per ZP. Dausa: district rural SC+ST 52.3% → 0 by formula, 1 by proviso, in every body — except bodies the Commission computed above 70% (0) or below 50% (formula, e.g. बांदीकुई 4 of 23).
+
+**Q5. Is the "total reservation ≤ 50%" a real rule? Did the state exceed it anywhere? Who trims what?**
+- Real and binding: K. Krishna Murthy (2010) 7 SCC 202 para 48(iv); Vikas Gawali (2021) para 67 — SC+ST+OBC (vertical) ≤ 50% outside Scheduled Areas. **Women are horizontal and not counted** (para 37).
+- The Rajasthan Act only half-implements it: s.15(3) makes OBC the filler up to 50, but s.15(2) keeps SC/ST proportional and the s.15(3) proviso presumes bodies above 50%. Trimming SC/ST is state practice, not text.
+- State practice 2026: everything sits at or under half — Pramukh 20/41, प्रधान 7/14, DLB ULB tables at exactly 10/20 in three bodies, Dausa ZP 7/10/1 = 18/37, every Dausa PS at floor(N/2). Where raw proportion exceeded (ZP; 9 of 14 PS, ST populations up to 76%), the sheets cut SC and ST both.
+- Method that reproduces the state's numbers: cap = floor(N/2); OBC first (proviso 1 if ≤ 70%); the rest split SC:ST in population ratio, leftover seat to the larger remainder. The text is silent on the split → declare it in the proceedings. (One Dausa PS kept SC at raw and cut ST — also a declared choice; the given number is in force.)
+- Hindi: "अनुसूचित जाति + अनुसूचित जनजाति + अन्य पिछड़ा वर्ग के कुल स्थान आधे से अधिक नहीं — सर्वोच्च न्यायालय, के. कृष्णमूर्ति (2010)। महिला स्थान इस गिनती में नहीं आते।"
+
+**Q6. What if the numbers the state gave for a body exceed 50%?**
+Don't conduct on it, don't fix it silently. (a) OBC above 50 − (SC+ST)% contradicts s.15(3) itself → send back with the sum. (b) SC+ST alone above 50 (ST-heavy body outside Scheduled Areas) → the Act's proportion collides with the Court's ceiling; the state's own method trims — refer. Same-day letter (Circular 62 ¶6 route): "SC a + ST b + OBC c = X of N > N/2; K. Krishna Murthy (2010) 7 SCC 202 para 48(iv); please confirm or revise." Member counts in प्रपत्र-2 are the district's own signed computation (correct and re-send); the Commission's OBC and all office counts are the state's (refer, don't overwrite). If the state confirms in writing, conduct on its number with the letter annexed. Court remedy for an excess is trimming to open seats (Gawali para 28), not voiding the election. The proviso can lawfully take a body one seat above half (7+1 of 15) — conduct on that, recorded.
+
+**Q7. SC+ST came to 68% because the state took a wrong base population. What do we round down, and how?**
+First fix the base (Q3): SC% and ST% must be over the **total population of the same area**; most inflated figures fall on this alone. If still above 50 after the base is right: cap = floor(N/2); OBC first (68% ≤ 70 → 1); the remaining R split SC:ST in population ratio, leftover to the larger remainder; never round SC and ST up separately (that is what breaches). Example N = 15, SC 20% / ST 48%: raw would be 3/7; trim → cap 7 → OBC 1 → R 6 → SC 1.76, ST 4.24 → 1+4, leftover to SC → **SC 2 / ST 4 / OBC 1**. Both categories give up seats roughly in proportion — nobody singled out. Send the corrected line back with the base shown.
+
+**Q8. Women's total — odd number of seats: round up or down? The officers cite a High Court ruling for "not more than half".**
+- Text: s.15(6)/s.16(5) "**not less than** one-half … shall be reserved for women"; s.16 Explanation: fraction "half or more … increased to the next higher number"; r.6(2) "one half … of the total number of seats"; r.7(9) "dividing the total number of seats by two". Half of an odd number is exactly .5 → the Explanation sends it UP (37 → 19). Nothing in the text rounds down.
+- Court: **no ruling found** (5-angle search, 9 judgments read, 16.08.2026) that caps women at half or rounds down. Krishna Murthy/Gawali cap SC/ST/OBC, not women; Manak Chand (RHC 2010) is about municipal women's 50% quantum, not rounding. See courts.md §2.
+- State practice: **DOWN** — the 13.08.2026 Pramukh draw took 20 women of 41; the department directed districts likewise for Aug 2026. Dausa followed the state (ZP 18 of 37; a 15-ward PS 7).
+- What to record: "महिला स्थान = कुल स्थान ÷ 2, अंश छोड़ा — राज्य स्तरीय लॉटरी 13.08.2026 की पद्धति के अनुरूप" and note the Explanation reads otherwise; ask the department for its citation in writing. Either way the difference is one seat per body; following the state's uniform arithmetic is the defensible position for a district. Calculator: `--women-total down|up`.
+
+**Q9. Women within a category (SC/ST/OBC) — odd category count?**
+r.7(8)(a): "derived by dividing the seats … by two" — silent on the fraction. Practice (13.08.2026: 4 of 8, 3 of 7, 2 of 5; department direction "round down in categories, shift the liability to general"): **floor per category**; the shortfall goes to general-women through r.7(9). r.7(8)(b): if SC, ST and OBC have exactly **one seat each**, one of the three, by lot, carries the women's tag (keeps its category); any other pattern (1-1-0, 2-1-1) → floor applies, a lone seat carries no women's tag (Q-5). r.7(7)'s "one third … Backward Classes" is 1994 residue; Circular 62 ¶4(v) 50% in every category → divisor two for OBC too. Open point Q-4 (Explanation could be read to push 1.5 → 2). Record D-2.
+
+**Q10. General-women — how many, and what if there aren't enough unreserved wards?**
+r.7(9): general-women = total women − (SC-W + ST-W + OBC-W). If that exceeds the unreserved pool, cap at the pool, record the shortfall, refer if material (Code 1.9, D-4). Where every ward is one category (100% ST body) and the pool is 0, one extra seat within that category is earmarked for women so s.15(6) holds (D-32).
+
+**Q11. Women's offices (सरपंच per PS, प्रधान per ZP) — how many?**
+r.9(1) → s.16: same arithmetic per PS / per ZP (total ÷ 2, category floors, residual) — state practice (प्रधान Dausa 7 = 1/2/0/4). r.9(3): the women's offices are "determine[d] by draw of lots" — bare text; the stratified draw (SC-W from SC offices, ST-W from ST offices, OBC-W from OBC offices, GEN-W from unreserved) is the state's 13.08 practice → declare D-20. Whether s.16(5)'s half is per tier or pooled statewide is Q-1.
+
+**Q12. Urban women — one-half or one-third?**
+Municipalities Act 2009 s.6(6)/(7) prints one-half with the same round-up Explanation, but (a) Manak Chand (RHC DB 2010) read it down, and (b) the Municipal (Election) Rules 1994 r.5(4)/(7)/(10)/(11) themselves still say **one third** verbatim (never amended to one-half — see rules-verbatim.md, municipal r.5 note). DLB's 2026 अधिसूचना 23401 tables use **one-third per category, rounded to nearest**, summed (दौसा 55: 4/2/3/10 = 19) — so ⅓ rests on Rules text + court + practice. The अधिसूचना figures are authoritative for the draw; the tool only cross-checks. Municipal r.5 map: 5(2)–(8) descending order / common ward → higher %; **5(10) OBC by lot; 5(11) women's wards by lot**; 5(12) notice to MLAs + recognised parties; 5(13) BC/women lot-exclusion till the cycle completes. Hindi: "नगर निकाय में महिला स्थान वर्गवार एक-तिहाई, निकटतम पूर्णांक — अधिसूचना 23401 के अनुसार।"
+
+---
+## C. Which wards/units (lists)
+
+**Q13. Does the 5% threshold apply?**
+PRI: yes — r.7(1)/(4) "excluding the wards … where such percentage is less than five"; strict (< 5.00 out; exactly 5.00 in); imported to offices by r.9(2). ULB: municipal r.5(2)/(5) verbatim has **no** such exclusion — DLB 23411 ¶1–3 gives descending order only; a district may still apply 5% only by declaration and only if it changes nothing (in Dausa it changes nothing).
+
+**Q14. How is the SC (then ST) list built? Ties?**
+Percentage = the unit's own SC ÷ its own total (concentration), integer cross-multiplication for precision. Build the WHOLE list first, sort descending, then label SC-1, SC-2 … (r.7(1)-(2)); allocate SC_n serially (r.7(3)); only then build the ST list (r.7(4)-(6)). Ties within one list: text silent → ladder D-9: full-precision compare → higher absolute SC (ST) population → higher total → public lot under r.7(11). Record every tested-and-excluded ward (D-8).
+
+**Q15. A ward is within quota on both the SC and ST lists (r.8).**
+"Whichever has higher percentage" (r.8; Explanation 14% vs 11% → SC). "Common" = within quota on both lists, not merely above 5% on both (D-14 — a declared definition). The losing list cascades to its next-ranked unit; the winner's list is untouched; repeat until no common unit; only then run the women's lots — this **sequence** is settled text (r.7(3)–(6) then r.8 "notwithstanding … rules 6 and 7"; Code 3.3); the *no-renumbering / no-compaction* of the loser's serial is the declared part (D-15). Same for offices (r.9(2), Circular 62 ¶4(iv)).
+
+**Q16. Fresh cycle or continuing cycle in 2026?**
+PRI members (ZP/PS/GP wards): **fresh** — Circular 62 ¶4(i) "नये चक्रानुक्रम (साईकिल) से" (the paragraph names SC/ST/OBC); pointer at SC-1/ST-1, no OBC-lot exclusions. For the *women's* lot memory of member wards ¶4(i) is silent — the reasoned position (no ward identity survives redelimitation) is to treat it fresh too, but say so as a declaration (edge case ow07; Q-6), not as ¶4(i)'s words. PRI offices (सरपंच, प्रधान): **continue** the running cycle — ¶4(ii)/(iii): exclude units reserved for the same category last time; new (नवसृजित) units join with no history; "यदि चक्र पूर्ण हो गया तो नये सिरे से". ULB: DLB 23434 — continues only where wards unchanged/≤5 changed; >⅓ changed / count up / new area / dispute → fresh (all 11 Dausa bodies fresh in 2026).
+
+**Q17. How does SC/ST rotation work across elections (r.7(12))?**
+Serial list: "continue to be operated serially from … where the allocation … ended in the preceding election; be operated till it is exhausted; be re-operated from the beginning after it is exhausted." Pool-then-rank (exclude units served this cycle, re-rank the rest by current %) is the circular's gloss for a changed list — same result. Exhaustion = every listed unit served once since the last restart → restart in the same sitting for the shortfall (D-12; Q-6). Lawful oddities: a one-unit list re-reserves the same unit every cycle; SC and ST lists pace independently.
+
+**Q18. Does r.7(13) create a women's cycle? What exactly is excluded?**
+Text: "Wards and constituencies reserved for Backward Classes and women by draw of lots in the first general election shall be excluded while drawing lots for such reservation in succeeding elections till the cycle is completed." Yes — the only clause giving women's (and OBC) reservation memory; category-wise ("such reservation": prior-OBC out of the OBC pot, prior-women out of the women's pot; no cross-over); for the whole cycle, not one election; "cycle completed" undefined (practice: pot exhausted → restart). Scope = member seats. Offices: r.9(2) imports r.7 for SC/ST/OBC offices; **r.9(3) women's offices have no exclusion clause** — any women's-office rotation is a declared rule (D-19; Q-6). Members 2026 start fresh (¶4(i) for SC/ST/OBC; women's memory treated fresh by declaration since no ward identity survived redelimitation — ow07/Q-6) — r.7(13) starts mattering from the next election.
+
+**Q19. General-women lookback for सरपंच/प्रधान — last election only, or the whole cycle?**
+Text: r.9(3) silent; r.7(13)'s logic (if applied) = whole cycle — that is also how Code node 5.2 phrases the pot ("preceding election(s) of the running cycle"). Department practice/direction Aug 2026: exclude only the **last** election's सामान्य-महिला holders — the reading applied in the Dausa draws. Both defensible; write which one you applied (D-19) — "गत निर्वाचन में सामान्य-महिला हेतु आरक्षित इकाइयाँ लॉटरी से बाहर".
+
+**Q20. New / reorganised / renamed units — what history do they carry?**
+Identity by LGD code: rename with same boundary = same unit (history kept); boundary change with same code = पुनर्गठित (history kept); the r.4 statement's own label decides नवसृजित (no history, joins the pool). History travels with the unit into a new PS/district. A पुनर्गठित GP's wards start fresh while its सरपंच office keeps its history — lawful (¶4(i) vs ¶4(ii)); say which office the history belongs to (D-13, D-35, D-36; Q-15).
+
+---
+## D. The sitting (lots, notice, record)
+
+**Q21. Which steps are by lot, and who must be told?**
+Lots: OBC (r.7(7)), women's tags and general-women (r.7(10)), one-each (r.7(8)(b)), same-list ties (declared), women's offices (r.9(3)). SC/ST placement is by descending list, no lot. Notice: r.7(11) — fix place/date/time and inform every MLA whose constituency covers any part of the units; draw "in the presence of such members … who may choose to be present" (presence optional; start on time; a proxy is a guest). ULB: MLAs **and** recognised political parties (municipal r.5(12), DLB 23423). One notice for the whole sitting, ≥ 3 clear days (D-21); Circular 62 ¶7: stagger draws so a member can attend each; ¶8: videography of the entire process.
+
+**Q22. The pot is short / exhausted (fewer eligible units than seats to draw).**
+The cycle is complete for that reservation → restart: refill the pot with all otherwise-eligible units and draw the shortfall in the same sitting, minuted (r.7(12)(ii)-(iii) by analogy; Circular 62 ¶4(ii) "यदि चक्र पूर्ण हो गया"; D-12). Never draw from a pot that isn't shown to the room first.
+
+**Q23. Chit hygiene, corrections, redraws.**
+One master roster; one label per unit; a slip drawn in one pot is removed from all later pots on camera; a wrong slip found mid-draw stops the pot, is removed on camera, pot redrawn from the start (D-18). Corrections before the order: rebuild the whole ranked list of that body (one ward's correction re-ranks all). After a lot: dependent lots are redrawn with fresh r.7(11) notice — Virender Singh (RHC 2020) upheld exactly such redraws; purely typographical fixes don't reopen (Jai Singh, RHC DB 2019). Only the final signed order enters the rotation register (D-25).
+
+**Q24. Who conducts; can it be delegated?**
+The delegated officer personally — Collector: ZP/PS wards, प्रधान; SDM: GP wards, सरपंच (Notification /42). No sub-delegation; if unavailable, re-fix and re-notify (D-24; Q-9). Dates 2026: district level 17.08, SDM level 18.08 (Circular /64).
+
+**Q25. Scheduled Areas.**
+All chairperson offices ST, half of them ST-women (Sch. Areas Act 1999 s.3; Circular 62 ¶5); ST member seats not less than one-half; the Krishna Murthy 50% ceiling admits an exception here only. Dausa has none.
+
+**Q26. Sequence of the sitting (one page).**
+Declarations read and minuted (D-list) → raw population table shown → SC list built and allocated → ST list built and allocated → r.8 corrections and cascades → OBC pot shown, drawn → SC-W / ST-W / OBC-W tags drawn within their sets → general-women pot shown, drawn (restart if short) → remainder = सामान्य → final checks (Σ = N; women = W) → proceedings signed same day, order affixed and uploaded, register updated (Code §7).
+
+---
+## E. When numbers and rules disagree
+
+**Q27. The state's letter gives a number the rule doesn't reproduce.**
+The given number is in force for the draw (Circular 62 ¶2 — offices; Commission — OBC; district प्रपत्र-2 — members). Show the derivation alongside, don't call it a verdict; if the given number is unlawful on its face (Q6) refer before conducting; otherwise record the source of each count and proceed. Never write "office wrong / engine right" in a party-facing document.
+
+**Q28. What must the proceedings contain so the draw survives challenge?**
+The declarations (D-1 … D-36) actually used — at minimum: rounding method for women (D-2), tie ladder (D-9), exhaustion/restart (D-12), r.8 "common" definition (D-14), no compaction (D-15), pot hygiene (D-18), women's-office lookback (D-19), stratified women's-office draw (D-20), notice record (D-21), who drew (D-23), only-final-order-counts (D-25); the population table, every list with excluded wards, every pot roster before the draw, the video reference, MLA/party notice dispatch and acknowledgements, referrals made (Circular 62 ¶6, helpdesk ¶10).
+
+**Q29. Where is the clickable tool / the worked Dausa example?**
+Public link (works on a phone): https://samoppakiks.github.io/chakra-dausa-2026/ — every tier, derivations behind "गणना विस्तार में देखें", party-facing view; `?ops` for the operator view. Source: private repo Samoppakiks/dausa-avsar (chakra/).
+
+---
+## Letter lines (copy, fill)
+- Ceiling breach: "निकाय ___ हेतु प्रेषित संख्या SC __ + ST __ + OBC __ = __ (कुल __ स्थानों में से), जो 50% (__) से अधिक है — के. कृष्णमूर्ति बनाम भारत संघ, (2010) 7 SCC 202, पैरा 48(iv)। कृपया संख्या की पुष्टि/संशोधन करावें। लॉटरी उक्त स्पष्टीकरण के उपरान्त की जायेगी।"
+- Wrong base: "SC/ST प्रतिशत की गणना में आधार जनसंख्या __ ली गई है जबकि क्षेत्र की कुल जनसंख्या __ है (धारा 15(2))। सही आधार पर SC __%, ST __% → स्थान SC __, ST __ (50% सीमा सहित)।"
+- Women rounding: "महिला स्थान = कुल __ ÷ 2 = __, अंश छोड़ा — राज्य स्तरीय लॉटरी 13.08.2026 की पद्धति के अनुरूप (धारा 16 स्पष्टीकरण के अनुसार __ आता है; विभागीय निर्देश की प्रति संलग्न/अपेक्षित)।"
