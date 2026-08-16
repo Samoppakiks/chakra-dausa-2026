@@ -1,3 +1,5 @@
+> **Got this folder from someone? Unzip it and tell your AI: "Read START-HERE.md in this folder and follow it."** It will load the desk (answer any question on the 2026 Rajasthan reservation lottery, with the clause quoted) and the builder (your district's page + sheets from your documents), and ask which you want first. See `START-HERE.md`.
+
 # आरक्षण लॉटरी हेल्प-डेस्क · Rajasthan reservation-lottery desk (Claude skill)
 
 A Claude skill that answers questions about seat/office reservation and the reservation lottery for Rajasthan's 2026 local-body elections — panchayat (जिला परिषद / पंचायत समिति / ग्राम पंचायत wards, सरपंच, प्रधान, प्रमुख) and urban (nagar nigam / parishad / palika wards) — from the actual text of the Act, Rules, circulars and court rulings, with the state's own 2026 practice shown beside the text, and a calculator for how many SC/ST/OBC/women seats a body gets.
